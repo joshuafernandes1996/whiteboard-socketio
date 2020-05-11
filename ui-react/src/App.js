@@ -1,7 +1,13 @@
 import React from 'react';
 import './App.css';
+import Socket from 'socket.io';
 
 function App() {
+
+  // handlePencilClick=()=>{
+
+  // }
+
   return (
     <div className="App" style={{
       margin: 10, padding: 10, marginBottom: 5
@@ -24,8 +30,9 @@ function App() {
         <button type="button" className="btn btn-warning btn-sm" value="text" id="text-button">Text</button>
         <button type="button" className="btn btn-warning btn-sm" id="clear-all">Clear All</button>
         <div style={{ padding: 20, display: 'inline'}}><label for="colour" style={{ position: 'absolute' }}>Colour : </label>
-          <input id="colour-picker" value="#000000" style={{ width: 80 }} className="jscolor {width:243, height:150, position:'right',
-    borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}"></input>
+          <input id="colour-picker" value="#000000" style={{ width: 80 }} 
+          className="jscolor, {{width:243, height:150, position:'right',
+    borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}}"></input>
         </div>
         <span className="form-group" style={{ width: 90, display: 'inline-block' }}>
           <label for="line-Width">Thickness: </label>
