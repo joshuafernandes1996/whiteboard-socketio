@@ -1,12 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div className="alert alert-info" style={{ padding: '10px !important', marginBottom: 5, width: '88%' }}>
-        <strong>Socket IO &#10084;</strong>  - This is a Multi-Users Drawing board, Open <a class="linkToBoard" style={{ cursor: 'pointer', color: '#ff002d' }} target="_blank">link</a> in another tab or Open in another computer try drawing simultaneously in both. <strong>Cool, isn't ?</strong>
+    <div className="App" style={{
+      margin: 10, padding: 10, marginBottom: 5
+
+    }}>
+      <div className="alert alert-info"
+        style={{
+          padding: '10px !important', marginBottom: 5,
+          color: '#31708f', backgroundColor: '#d9edf7', borderColor: '#bce8f1',
+          border: '1px solid transparent', borderRadius: 4,
+        }}>
+        <strong>Socket IO &#10084;</strong>  - This is a Multi-Users Drawing board, Open <a className="linkToBoard" style={{ cursor: 'pointer', color: '#ff002d' }} target="_blank">link</a> in another tab or Open in another computer try drawing simultaneously in both. <strong>Cool, isn't ?</strong>
       </div>
       <p>
         <button type="button" className="btn btn-warning btn-sm" value="pencil" id="pencil-button">Pencil</button>
@@ -16,9 +23,10 @@ function App() {
         <button type="button" className="btn btn-warning btn-sm" value="line" id="line-button">Line</button>
         <button type="button" className="btn btn-warning btn-sm" value="text" id="text-button">Text</button>
         <button type="button" className="btn btn-warning btn-sm" id="clear-all">Clear All</button>
-        <label for="colour" style={{ position: 'absolute' }}>Colour : </label>
-        <input id="colour-picker" value="#000000" style={{ width: 80 }} className="jscolor {width:243, height:150, position:'right',
+        <div style={{ padding: 20, display: 'inline'}}><label for="colour" style={{ position: 'absolute' }}>Colour : </label>
+          <input id="colour-picker" value="#000000" style={{ width: 80 }} className="jscolor {width:243, height:150, position:'right',
     borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}"></input>
+        </div>
         <span className="form-group" style={{ width: 90, display: 'inline-block' }}>
           <label for="line-Width">Thickness: </label>
           <select className="form-control" id="line-Width">
@@ -63,7 +71,7 @@ function App() {
         </span>
       </p>
       <div id="container">
-        <canvas id="imageView" width="1000" height="500">
+        <canvas id="imageView" height="400" style={{height: '100%'}}>
           <p>Unfortunately, your browser is currently unsupported by our web
           application.  We are sorry for the inconvenience. Please use one of the
           supported browsers listed below, or draw the image you want using an
